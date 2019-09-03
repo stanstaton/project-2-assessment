@@ -2,6 +2,8 @@ html, body {
   margin: 0;
   padding: 0;
   text-align: center;
+  align-items: center;
+  align-content: center;
 }
 
 section {
@@ -16,6 +18,7 @@ form {
   width: 30%;
   margin: auto;
   text-align: center;
+
 }
 
 input {
@@ -23,4 +26,16 @@ input {
   height: 2em;
   border-radius: 2px;
   margin: 2px;
+  text-align: center;
 }
+
+div {
+  display: inline-block;
+  align-self: center;
+  justify-self: center;
+  border: 2px solid black;
+  background: gray;
+  width: 200px;
+  height: 120px;
+}
+

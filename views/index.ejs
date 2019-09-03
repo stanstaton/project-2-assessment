@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1>Wacky Widgets</h1>
+    <%if (widgets.length > 0) { %>
+        <%widgets.forEach(w => {%>
+            <div>
+                <p><%=w.description%></p>
+                <p>Quantity: <%=w.quantity%></p>
+                <form method="POST" action="/?_method=DELETE">
+                    <input hidden type="text" name="id" value="<%= w.id%>">
+                    <input type="submit" value="Delete">
+                </form>
+            </div>
+            <br>
+       <% }) %>
+    <%} else { %>
+    <h3>No Widgets Exist</h3>
+   <% }%>
+    <hr>
+
+    <h4>Add Widget</h4>
+    <form method="POST" action="/">
+    <input type="text" name="description" placeholder="Widget Description">
+    <br>
+    <input type="number" name="quantity" placeholder="Widget Quantity">
+    <br>
+    <input type="submit" value="Add Widget">
+    </form>
+    
+</body>
+</html>
